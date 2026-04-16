@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    
     return render_template('index.html')
 
 
@@ -16,8 +17,8 @@ def about():
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
     if request.method == 'POST':
-        name = request.form.get('name', 'Student')
-        return render_template('result.html', name=name)
+        get_name = request.form.get('name', 'Student')
+        return render_template('result.html', display_name=get_name)
     return render_template('form.html')
 
 
