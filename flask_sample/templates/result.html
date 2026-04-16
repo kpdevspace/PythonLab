@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block title %}Hello{% endblock %}
+
+{% block content %}
+<div class="alert alert-success">
+          <h4 class="alert-heading">Hello, {{ name }}!</h4>
+          <p>Nice to meet you. This page was rendered from a POST request.</p>
+</div>
+<p><a class="btn btn-outline-primary" href="/">Back home</a></p>
+{% endblock %}
